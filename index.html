@@ -267,20 +267,20 @@ const UPCOMING = [
 
 // ─── COURSE CATALOG ────────────────────────────────────────────────────────
 const CATALOG = [
-  { name:"CNAT Agent ONE", tagline:"There's an App for That", desc:"Real estate's top choice for Net Sheets and Closing Cost estimates. Control the numbers from any device.", hours:1, num:"43610*" },
-  { name:"CRM to ROI", tagline:"Update and Automate", desc:"Mastering CRM tools for business growth \u2014 best practices to optimize client relationships and maximize return on investment.", hours:1, num:"47150*" },
-  { name:"Contracts & Contractual Competence", tagline:"What's New for You?", desc:"Delve into the 1\u20134 Family Resale contract, addendums, and recent updates. Fulfills 3 hours of licensing renewal requirements.", hours:3, num:"48088*" },
-  { name:"Create with Canva", tagline:"Custom by Design", desc:"Unlock your creativity and elevate real estate marketing with a comprehensive Canva course tailored for agents.", hours:1, num:"47132*" },
-  { name:"Ensuring Insurance Coverage", tagline:"It's a Rating System", desc:"Navigate homeowners insurance complexities \u2014 types, carriers, and rates \u2014 with actionable insights for every transaction.", hours:1, num:"48090*" },
-  { name:"Farm to (Closing) Table", tagline:"Harvest Your Leads", desc:"Locally sourced leads from the top platforms in the industry. Use exclusive farming tools to identify buyers, sellers, and investors.", hours:1, num:"43630*" },
-  { name:"Keeping AI on Things", tagline:"Smarter, Not Harder", desc:"Harness the power of AI and language models like ChatGPT to transform your real estate business.", hours:1, num:"47177*" },
-  { name:"Legal Update I & II", tagline:"Necessary Knowledge", desc:"Review of recent legislative and TREC rule changes, including updates to TREC promulgated contract forms.", hours:4, num:"42039 / 42040*" },
-  { name:"RE: Technology", tagline:"How-to & Can-do", desc:"A dynamic exploration of the latest tools and updates in real estate technology \u2014 equipping agents with a cutting edge.", hours:1, num:"47152*" },
-  { name:"Scripty Business", tagline:"Rehearsing Success", desc:"It's not just what you say \u2014 it's how you say it. Create scripts that take the guesswork out of client conversations.", hours:2, num:"47130*" },
-  { name:"Social Media Bootcamp", tagline:"Like and Follow...", desc:"Social media connects agents to clients. Expand your reach and improve your online presence to find new prospects.", hours:2, num:"43480*" },
-  { name:"TREC Advertising & Compliance", tagline:"Mind Your Marketing", desc:"Stay current on the rules and regulations of real estate advertising according to the Texas Real Estate Commission.", hours:1, num:"43609*" },
-  { name:"Video Marketing", tagline:"Cinematic Strategies", desc:"Step out of your comfort zone and into video marketing. This medium isn't going away \u2014 neither should you.", hours:1, num:"47157*" },
-  { name:"Water Your Rights", tagline:"Rules and Regulations", desc:"A concise guide to Texas water rights for real estate agents and the impact on property transactions.", hours:1, num:"48091*" }
+  { name:"CNAT Agent ONE", tagline:"There's an App for That", desc:"Real estate's top choice for Net Sheets and Closing Cost estimates. Control the numbers from any device.", hours:1 },
+  { name:"CRM to ROI", tagline:"Update and Automate", desc:"Mastering CRM tools for business growth \u2014 best practices to optimize client relationships and maximize return on investment.", hours:1 },
+  { name:"Contracts & Contractual Competence", tagline:"What's New for You?", desc:"Delve into the 1\u20134 Family Resale contract, addendums, and recent updates. Fulfills 3 hours of licensing renewal requirements.", hours:3 },
+  { name:"Create with Canva", tagline:"Custom by Design", desc:"Unlock your creativity and elevate real estate marketing with a comprehensive Canva course tailored for agents.", hours:1 },
+  { name:"Ensuring Insurance Coverage", tagline:"It's a Rating System", desc:"Navigate homeowners insurance complexities \u2014 types, carriers, and rates \u2014 with actionable insights for every transaction.", hours:1 },
+  { name:"Farm to (Closing) Table", tagline:"Harvest Your Leads", desc:"Locally sourced leads from the top platforms in the industry. Use exclusive farming tools to identify buyers, sellers, and investors.", hours:1 },
+  { name:"Keeping AI on Things", tagline:"Smarter, Not Harder", desc:"Harness the power of AI and language models like ChatGPT to transform your real estate business.", hours:1 },
+  { name:"Legal Update I & II", tagline:"Necessary Knowledge", desc:"Review of recent legislative and TREC rule changes, including updates to TREC promulgated contract forms.", hours:4 },
+  { name:"RE: Technology", tagline:"How-to & Can-do", desc:"A dynamic exploration of the latest tools and updates in real estate technology \u2014 equipping agents with a cutting edge.", hours:1 },
+  { name:"Scripty Business", tagline:"Rehearsing Success", desc:"It's not just what you say \u2014 it's how you say it. Create scripts that take the guesswork out of client conversations.", hours:2 },
+  { name:"Social Media Bootcamp", tagline:"Like and Follow...", desc:"Social media connects agents to clients. Expand your reach and improve your online presence to find new prospects.", hours:2 },
+  { name:"TREC Advertising & Compliance", tagline:"Mind Your Marketing", desc:"Stay current on the rules and regulations of real estate advertising according to the Texas Real Estate Commission.", hours:1 },
+  { name:"Video Marketing", tagline:"Cinematic Strategies", desc:"Step out of your comfort zone and into video marketing. This medium isn't going away \u2014 neither should you.", hours:1 },
+  { name:"Water Your Rights", tagline:"Rules and Regulations", desc:"A concise guide to Texas water rights for real estate agents and the impact on property transactions.", hours:1 }
 ];
 
 // ─── INLINE SVG ICONS ──────────────────────────────────────────────────────
@@ -349,7 +349,7 @@ function renderCatalog(filter) {
       <div class="course-name">${c.name}</div>
       <div class="course-tagline">${c.tagline}</div>
       <div class="course-desc">${c.desc}</div>
-      <div class="course-footer"><span class="course-num">Course #${c.num}</span></div>
+      
     </div>`;
   }).join('');
 }
