@@ -1,61 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Update I &amp; II | CNAT Title</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root{--bg-page:#1a2332;--bg-panel:#0f1520;--accent-blue:#2d7dd2;--accent-blue-light:#4a9ae8;--accent-yellow:#faed36;--text-white:#fff;--text-grey:#8892a4;--border:#1a2332;--input-bg:#0a0e16;--success-green:#34d399}*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Montserrat',sans-serif;background:var(--bg-page);color:var(--text-white);min-height:100vh;-webkit-font-smoothing:antialiased}.page-wrapper{max-width:640px;margin:0 auto;padding:30px 20px 60px}.site-header{text-align:center;margin-bottom:30px;animation:fadeDown .6s ease-out}.site-header .logo-text{font-size:11px;letter-spacing:6px;text-transform:uppercase;color:var(--accent-blue);font-weight:600;margin-bottom:4px}.site-header .logo-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--text-grey);font-weight:400}@keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}.flyer-card{border-radius:14px;overflow:hidden;margin-bottom:30px;box-shadow:0 20px 50px rgba(0,0,0,.35);animation:fadeUp .7s ease-out .1s both}.flyer-card img{width:100%;display:block}@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}.info-strip{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:30px;animation:fadeUp .7s ease-out .2s both}.info-tile{background:var(--bg-panel);border:1px solid var(--border);border-radius:10px;padding:18px 16px;text-align:center}.info-tile .tile-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-grey);margin-bottom:8px}.info-tile .tile-value{font-size:14px;font-weight:600;color:var(--text-white);line-height:1.4}.info-tile .tile-value.yellow{color:var(--accent-yellow)}.location-strip{display:grid;grid-template-columns:1fr auto 1fr;gap:0;margin-bottom:30px;animation:fadeUp .7s ease-out .25s both}.loc-card{background:var(--bg-panel);border:1px solid var(--border);border-radius:10px;padding:22px 18px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.loc-card .loc-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}.loc-card .loc-icon.building{background:rgba(45,125,210,.12);color:var(--accent-blue)}.loc-card .loc-icon.zoom{background:rgba(45,130,246,.12)}.loc-card .loc-icon.zoom svg{width:22px;height:22px}.loc-card .loc-type{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-grey);font-weight:500}.loc-card .loc-name{font-size:14px;font-weight:600;color:var(--text-white);line-height:1.4}.loc-card .loc-address{font-size:11px;color:var(--text-grey);line-height:1.5}.loc-divider{display:flex;align-items:center;justify-content:center;padding:0 14px}.loc-divider span{font-size:12px;font-weight:600;color:var(--accent-yellow);text-transform:uppercase;letter-spacing:2px}@media(max-width:480px){.location-strip{grid-template-columns:1fr;gap:0}.loc-divider{padding:10px 0}.loc-card{padding:18px 16px}}.reg-card{background:var(--bg-panel);border:1px solid var(--border);border-radius:14px;padding:40px 32px;position:relative;overflow:hidden;animation:fadeUp .7s ease-out .3s both}.reg-card::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(45deg,transparent,rgba(45,125,210,.08),transparent,rgba(250,237,54,.08),transparent);border-radius:15px;z-index:-1;animation:borderGlow 8s linear infinite;background-size:400% 400%}@keyframes borderGlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.reg-card h2{font-size:22px;font-weight:300;text-align:center;margin-bottom:8px;letter-spacing:.3px}.reg-card h2 span{color:var(--accent-yellow);font-weight:600}.reg-card .reg-sub{text-align:center;color:var(--text-grey);font-size:13px;margin-bottom:32px;line-height:1.6}.form-group{margin-bottom:20px}.form-label{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-grey);margin-bottom:10px;font-weight:500}.form-input{width:100%;background:var(--input-bg);border:1px solid var(--border);color:var(--text-white);padding:15px 18px;font-family:'Montserrat',sans-serif;font-size:14px;border-radius:8px;outline:none;transition:border-color .3s,box-shadow .3s}.form-input:focus{border-color:var(--accent-blue);box-shadow:0 0 0 3px rgba(45,125,210,.1)}.form-input::placeholder{color:#3a4560}.attendance-toggle{display:grid;grid-template-columns:1fr 1fr;gap:10px}.attendance-option{position:relative}.attendance-option input[type="radio"]{position:absolute;opacity:0;width:0;height:0}.attendance-option label{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 12px;background:var(--input-bg);border:1px solid var(--border);border-radius:10px;cursor:pointer;transition:all .3s ease;text-align:center}.attendance-option label .att-icon{font-size:22px;line-height:1}.attendance-option label .att-text{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-grey);transition:color .3s}.attendance-option label .att-detail{font-size:9px;color:#4a5568;letter-spacing:.5px;transition:color .3s}.attendance-option input[type="radio"]:checked+label{border-color:var(--accent-blue);background:rgba(45,125,210,.08)}.attendance-option input[type="radio"]:checked+label .att-text{color:var(--text-white)}.attendance-option input[type="radio"]:checked+label .att-detail{color:var(--text-grey)}.attendance-option label:hover{border-color:rgba(45,125,210,.4)}.submit-btn{width:100%;background:var(--accent-blue);color:#fff;padding:18px 24px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2px;border:none;border-radius:8px;cursor:pointer;transition:all .3s ease;margin-top:8px}.submit-btn:hover{background:var(--accent-blue-light);transform:translateY(-2px);box-shadow:0 8px 25px rgba(45,125,210,.3)}.submit-btn:active{transform:translateY(0) scale(.98)}.submit-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}.payment-section{display:none;animation:fadeUp .6s ease-out}.payment-section.visible{display:block}.payment-section h2{font-size:22px;font-weight:300;text-align:center;margin-bottom:8px}.payment-section h2 span{color:var(--accent-yellow);font-weight:600}.payment-section .pay-sub{text-align:center;color:var(--text-grey);font-size:13px;margin-bottom:28px;line-height:1.6}.payment-options{display:flex;flex-direction:column;gap:12px;margin-bottom:20px}.pay-btn{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;background:linear-gradient(145deg,#141c2a,#0f1520);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text-white);font-family:'Montserrat',sans-serif;transition:all .3s ease;cursor:pointer}.pay-btn:hover{border-color:var(--accent-blue);transform:translateY(-2px);box-shadow:0 10px 30px rgba(45,125,210,.15)}.pay-btn .pay-left{display:flex;flex-direction:column;gap:4px}.pay-btn .pay-name{font-size:14px;font-weight:600;letter-spacing:.5px}.pay-btn .pay-date{font-size:10px;color:var(--text-grey);letter-spacing:1px;text-transform:uppercase}.pay-btn .pay-price{font-size:18px;font-weight:700;color:var(--accent-yellow)}.pay-btn.bundle{border-color:rgba(45,125,210,.3);position:relative}.pay-btn.bundle::after{content:'BEST VALUE';position:absolute;top:-1px;right:16px;background:var(--accent-blue);color:#fff;font-size:8px;font-weight:700;letter-spacing:1.5px;padding:4px 10px;border-radius:0 0 6px 6px}.reg-confirmation{display:none;text-align:center;padding:20px 0 10px}.reg-confirmation.visible{display:block}.conf-check{width:50px;height:50px;border-radius:50%;background:rgba(52,211,153,.12);border:2px solid var(--success-green);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:22px;color:var(--success-green);animation:popIn .4s ease-out}@keyframes popIn{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}.conf-name{font-size:14px;font-weight:500;margin-bottom:4px}.conf-format{font-size:11px;color:var(--text-grey);letter-spacing:1px;text-transform:uppercase}.page-footer{text-align:center;margin-top:40px;padding-top:24px;border-top:1px solid rgba(26,35,50,.6);animation:fadeUp .7s ease-out .5s both}.page-footer .tagline{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-grey);font-weight:400}.page-footer .tagline span{color:var(--accent-yellow)}.page-footer .provider{margin-top:8px;font-size:9px;color:#4a5568;letter-spacing:1px}@media(max-width:480px){.page-wrapper{padding:20px 16px 50px}.reg-card{padding:32px 22px}.reg-card h2,.payment-section h2{font-size:19px}.info-strip{grid-template-columns:1fr}.attendance-option label{padding:14px 10px}.pay-btn{padding:16px 18px}.pay-btn .pay-name{font-size:13px}.pay-btn .pay-price{font-size:16px}}@media(max-width:360px){.reg-card{padding:28px 18px}}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNAT Education | Continuing Education for Texas Real Estate Professionals</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2332;--dark:#0a0e16;--panel:#0f1520;--blue:#2d7dd2;--blue-light:#4a9ae8;--yellow:#faed36;--white:#fff;--grey:#8892a4;--border:rgba(255,255,255,.07);--success:#34d399}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--white);min-height:100vh;-webkit-font-smoothing:antialiased}
+.nav{position:sticky;top:0;z-index:100;background:rgba(10,14,22,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px}
+.nav-inner{max-width:1200px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:12px}
+.nav-logo{width:32px;height:32px}
+.nav-text{display:flex;flex-direction:column}
+.nav-title{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--white)}
+.nav-sub{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--grey)}
+.nav-badge{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);font-weight:600;border:1px solid rgba(45,125,210,.3);border-radius:4px;padding:3px 8px}
+.hero{max-width:1200px;margin:0 auto;padding:64px 24px 48px}
+.hero-eyebrow{font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:16px}
+.hero-title{font-size:clamp(36px,6vw,64px);font-weight:800;line-height:1.05;letter-spacing:-1.5px;margin-bottom:16px}
+.hero-title span{color:var(--yellow)}
+.hero-desc{font-size:15px;color:var(--grey);line-height:1.7;max-width:560px;margin-bottom:32px;font-weight:400}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat-num{font-size:22px;font-weight:800;color:var(--white)}
+.stat-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--grey)}
+.hero-divider{width:100%;height:1px;background:var(--border);margin:48px 0 0}
+.section{max-width:1200px;margin:0 auto;padding:48px 24px}
+.section-header{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
+.section-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--blue);font-weight:600}
+.section-count{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--grey)}
+.section-title{font-size:24px;font-weight:700;margin-bottom:32px;letter-spacing:-.3px}
+.section-title span{color:var(--yellow)}
+.upcoming-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.class-card{background:linear-gradient(145deg,#0d1825,#0a1220);border:1px solid rgba(45,125,210,.2);border-radius:14px;padding:28px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s;text-decoration:none;display:block;color:var(--white)}
+.class-card:hover{transform:translateY(-3px);border-color:rgba(45,125,210,.5)}
+.class-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--yellow))}
+.class-status{display:inline-flex;align-items:center;gap:6px;font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.class-status.open{color:var(--success)}
+.class-status.open::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--success);display:block}
+.class-status.full{color:#f87171}
+.class-status.full::before{content:'';width:6px;height:6px;border-radius:50%;background:#f87171;display:block}
+.class-status.coming-soon{color:var(--grey)}
+.class-card-title{font-size:20px;font-weight:700;margin-bottom:4px}
+.class-card-sub{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--yellow);margin-bottom:20px;font-weight:500}
+.class-meta{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+.class-meta-row{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--grey)}
+.class-meta-icon{font-size:13px;flex-shrink:0}
+.class-meta-val{color:var(--white);font-weight:500}
+.class-footer{display:flex;align-items:center;justify-content:space-between}
+.class-price{font-size:22px;font-weight:800;color:var(--yellow)}
+.class-price-sub{font-size:9px;color:var(--grey);letter-spacing:1px;text-transform:uppercase;margin-top:1px}
+.class-cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:12px 20px;border-radius:8px;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+.class-cta:hover{background:var(--blue-light);transform:translateY(-1px)}
+.class-cta.disabled{background:transparent;border:1px solid var(--border);color:var(--grey);cursor:default}
+.class-cta.disabled:hover{transform:none;background:transparent}
+.no-classes{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:48px;text-align:center}
+.no-classes p{color:var(--grey);font-size:13px}
+.catalog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.course-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:24px;transition:border-color .2s,transform .2s}
+.course-card:hover{border-color:rgba(45,125,210,.3);transform:translateY(-2px)}
+.course-icon{font-size:28px;margin-bottom:14px;line-height:1}
+.course-name{font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px;line-height:1.3}
+.course-tagline{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--yellow);font-weight:600;margin-bottom:12px}
+.course-desc{font-size:12px;color:var(--grey);line-height:1.6;margin-bottom:16px}
+.course-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.course-hours{display:inline-flex;align-items:center;gap:5px;border-radius:6px;padding:4px 10px;font-size:10px;font-weight:700;letter-spacing:.5px}
+.course-num{font-size:9px;color:var(--grey);letter-spacing:1px}
+.provider-strip{background:var(--panel);border-top:1px solid var(--border);padding:32px 24px;margin-top:48px}
+.provider-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.provider-info{display:flex;flex-direction:column;gap:4px}
+.provider-name{font-size:14px;font-weight:600}
+.provider-detail{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey)}
+.provider-contact{font-size:12px;color:var(--grey)}
+.provider-contact a{color:var(--blue);text-decoration:none}
+.tagline-text{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);text-align:right}
+.tagline-text span{color:var(--yellow)}
+@media(max-width:640px){
+.hero{padding:40px 16px 32px}.section{padding:32px 16px}
+.hero-stats{gap:20px}.stat-num{font-size:18px}
+.upcoming-grid,.catalog-grid{grid-template-columns:1fr}
+.provider-inner{flex-direction:column;align-items:flex-start}
+.tagline-text{text-align:left}
+}
+</style>
 </head>
 <body>
-    <div class="page-wrapper">
-        <div class="site-header"><div class="logo-text">CNAT Title</div><div class="logo-sub">Community National Title</div></div>
-        <div class="flyer-card"><img src="https://files.cnattitle.tech/legal-flyer-april-2026.png" alt="CNAT Title Legal Update I and II Classes, April 28 and 30, 2026"></div>
-        <div class="info-strip">
-            <div class="info-tile"><div class="tile-label">Legal I</div><div class="tile-value">Tue, Apr 28</div></div>
-            <div class="info-tile"><div class="tile-label">Legal II</div><div class="tile-value">Thu, Apr 30</div></div>
-            <div class="info-tile"><div class="tile-label">Time</div><div class="tile-value">10:00 AM - 2:00 PM</div></div>
-            <div class="info-tile"><div class="tile-label">Pricing</div><div class="tile-value yellow">$25/class or $50 both</div></div>
-        </div>
-        <div class="location-strip">
-            <div class="loc-card"><div class="loc-icon building">&#127970;</div><div class="loc-type">In-Person</div><div class="loc-name">CNAT Title Fort Worth</div><div class="loc-address">2800 S. Hulen St, Ste 102<br>Fort Worth, TX 76109</div></div>
-            <div class="loc-divider"><span>or</span></div>
-            <div class="loc-card"><div class="loc-icon zoom"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="5" width="15" height="14" rx="2" fill="#2D8CFF"/><path d="M16 10l5-3v10l-5-3V10z" fill="#2D8CFF"/></svg></div><div class="loc-type">Virtual</div><div class="loc-name">Join via Zoom</div><div class="loc-address">Link sent to your email<br>after registration</div></div>
-        </div>
-        <div class="reg-card" id="regCard">
-            <h2>Register <span>Now</span></h2>
-            <p class="reg-sub">Fill in your info below, then choose your class on the next step.</p>
-            <form id="regForm">
-                <div class="form-group"><label class="form-label" for="regName">Your Name</label><input class="form-input" type="text" id="regName" name="name" placeholder="First and last name" required></div>
-                <div class="form-group"><label class="form-label" for="regEmail">Email Address</label><input class="form-input" type="email" id="regEmail" name="email" placeholder="you@example.com" required></div>
-                <div class="form-group">
-                    <label class="form-label">How Will You Attend?</label>
-                    <div class="attendance-toggle">
-                        <div class="attendance-option"><input type="radio" id="attInPerson" name="attendance" value="In-Person" required><label for="attInPerson"><span class="att-icon">&#127970;</span><span class="att-text">In-Person</span><span class="att-detail">Fort Worth Office</span></label></div>
-                        <div class="attendance-option"><input type="radio" id="attZoom" name="attendance" value="Zoom"><label for="attZoom"><span class="att-icon">&#128187;</span><span class="att-text">Via Zoom</span><span class="att-detail">Link sent after payment</span></label></div>
-                    </div>
-                </div>
-                <button type="submit" class="submit-btn" id="submitBtn">Continue to Payment</button>
-            </form>
-            <div class="reg-confirmation" id="regConfirmation"><div class="conf-check">&#10003;</div><p class="conf-name" id="confName"></p><p class="conf-format" id="confFormat"></p></div>
-        </div>
-        <div class="payment-section" id="paymentSection">
-            <div class="reg-card">
-                <h2>Choose Your <span>Class</span></h2>
-                <p class="pay-sub">Select which session you want to attend. You'll be taken to our secure checkout.</p>
-                <div class="payment-options">
-                    <a href="https://buy.stripe.com/4gM3cv5zS3fr6AJ1gD8AE0j" target="_blank" class="pay-btn"><div class="pay-left"><span class="pay-name">Legal Update I</span><span class="pay-date">Tuesday, April 28</span></div><span class="pay-price">$25</span></a>
-                    <a href="https://buy.stripe.com/dRmaEX0fy6rD3ox3oL8AE0t" target="_blank" class="pay-btn"><div class="pay-left"><span class="pay-name">Legal Update II</span><span class="pay-date">Thursday, April 30</span></div><span class="pay-price">$25</span></a>
-                    <a href="https://buy.stripe.com/5kQ8wP1jCaHT5wFaRd8AE0o" target="_blank" class="pay-btn bundle"><div class="pay-left"><span class="pay-name">Both Classes</span><span class="pay-date">Legal I + Legal II Bundle</span></div><span class="pay-price">$50</span></a>
-                </div>
-            </div>
-        </div>
-        <div class="page-footer"><p class="tagline">#AlwaysBeClosing &middot; <span>Texas Style</span></p><p class="provider">Provider #10034 &middot; Instructor: Bradley Patterson</p></div>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <svg class="nav-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="7" fill="#2d7dd2" fill-opacity=".15"/><path d="M16 7L7 14v11h6v-6h6v6h6V14L16 7z" fill="#2d7dd2"/><rect x="13" y="18" width="2" height="2" fill="#faed36"/><rect x="17" y="18" width="2" height="2" fill="#faed36"/><rect x="15" y="15" width="2" height="2" fill="#faed36"/></svg>
+      <div class="nav-text"><span class="nav-title">CNAT Education</span><span class="nav-sub">Community National Title</span></div>
     </div>
-    <script>
-    document.getElementById('regForm').addEventListener('submit',async function(e){e.preventDefault();var btn=document.getElementById('submitBtn');btn.disabled=true;btn.textContent='Submitting...';var name=document.getElementById('regName').value.trim();var email=document.getElementById('regEmail').value.trim();var attendance=document.querySelector('input[name="attendance"]:checked');if(!attendance){alert('Please select how you will attend.');btn.disabled=false;btn.textContent='Continue to Payment';return}var payload={name:name,email:email,attendance:attendance.value,source:'Legal Update Landing Page',submitted_at:new Date().toISOString()};try{await fetch('https://services.leadconnectorhq.com/hooks/9ZNjcEKhpBno9RRXrBA4/webhook-trigger/5169cb08-f3f7-4c92-b691-d5eb6b0b1861',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})}catch(err){console.error('Webhook error:',err)}document.getElementById('regForm').style.display='none';var conf=document.getElementById('regConfirmation');conf.classList.add('visible');document.getElementById('confName').textContent=name;document.getElementById('confFormat').textContent=attendance.value==='Zoom'?'Attending via Zoom':'Attending In-Person, Fort Worth';document.getElementById('paymentSection').classList.add('visible');setTimeout(function(){document.getElementById('paymentSection').scrollIntoView({behavior:'smooth',block:'start'})},300);});
-    </script>
+    <span class="nav-badge">Provider #10034</span>
+  </div>
+</nav>
+
+<div class="hero">
+  <p class="hero-eyebrow">Texas Real Estate Continuing Education</p>
+  <h1 class="hero-title">Learn. Close.<br><span>Earn CE.</span></h1>
+  <p class="hero-desc">CNAT Title offers hands-on continuing education classes for Texas real estate professionals — in-person in Fort Worth and via Zoom. Expert instructors. Practical content. No fluff.</p>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">14</span><span class="stat-label">Active Courses</span></div>
+    <div class="stat"><span class="stat-num">1–4</span><span class="stat-label">CE Hours Each</span></div>
+    <div class="stat"><span class="stat-num">2</span><span class="stat-label">Formats Available</span></div>
+    <div class="stat"><span class="stat-num">10034</span><span class="stat-label">TREC Provider</span></div>
+  </div>
+  <div class="hero-divider"></div>
+</div>
+
+<div class="section" id="upcoming">
+  <div class="section-header"><span class="section-label">Upcoming Classes</span><span class="section-count" id="upcomingCount"></span></div>
+  <h2 class="section-title">Register for an <span>Upcoming Session</span></h2>
+  <div class="upcoming-grid" id="upcomingGrid"></div>
+</div>
+
+<div class="section" id="catalog">
+  <div class="section-header"><span class="section-label">Course Catalog</span><span class="section-count">14 courses</span></div>
+  <h2 class="section-title">All <span>CNAT Courses</span></h2>
+  <div class="catalog-grid" id="catalogGrid"></div>
+</div>
+
+<div class="provider-strip">
+  <div class="provider-inner">
+    <div class="provider-info">
+      <span class="provider-name">CNAT Title — Fort Worth</span>
+      <span class="provider-detail">2800 S. Hulen St, Suite 102 · Fort Worth, TX 76109</span>
+      <span class="provider-contact">Questions? <a href="mailto:classes@cnattitle.com">classes@cnattitle.com</a></span>
+    </div>
+    <div>
+      <p class="provider-detail" style="margin-bottom:4px">TREC Provider #10034 · Instructor: Bradley Patterson</p>
+      <p class="tagline-text">#AlwaysBeClosing · <span>Texas Style</span></p>
+    </div>
+  </div>
+</div>
+
+<script>
+const UPCOMING=[
+  {title:"Legal Update I",tagline:"Necessary Knowledge",date:"Tue, April 28, 2026",time:"10:00 AM – 2:00 PM",hours:4,price:25,location:"In-Person & Zoom",registerUrl:"/legal-update-april-2026/",status:"open",courseNumbers:["42039"]},
+  {title:"Legal Update II",tagline:"Necessary Knowledge",date:"Thu, April 30, 2026",time:"10:00 AM – 2:00 PM",hours:4,price:25,location:"In-Person & Zoom",registerUrl:"/legal-update-april-2026/",status:"open",courseNumbers:["42040"]}
+];
+const CATALOG=[
+  {icon:"📱",name:"CNAT Agent ONE",tagline:"There's an App for That",desc:"Real estate's top choice for Net Sheets and Closing Cost estimates. Control the numbers from any device.",hours:1,num:"43610*"},
+  {icon:"🌐",name:"CRM to ROI",tagline:"Update and Automate",desc:"Mastering CRM tools for business growth — best practices to optimize client relationships and maximize return on investment.",hours:1,num:"47150*"},
+  {icon:"📝",name:"Contracts & Contractual Competence",tagline:"What's New for You?",desc:"Delve into the 1–4 Family Resale contract, addendums, and recent updates. Fulfills 3 hours of licensing renewal requirements.",hours:3,num:"48088*"},
+  {icon:"🎨",name:"Create with Canva",tagline:"Custom by Design",desc:"Unlock your creativity and elevate real estate marketing with a comprehensive Canva course tailored for agents.",hours:1,num:"47132*"},
+  {icon:"🛡️",name:"Ensuring Insurance Coverage",tagline:"It's a Rating System",desc:"Navigate homeowners insurance complexities — types, carriers, and rates — with actionable insights for every transaction.",hours:1,num:"48090*"},
+  {icon:"🌾",name:"Farm to (Closing) Table",tagline:"Harvest Your Leads",desc:"Locally sourced leads from the top platforms. Use exclusive farming tools to identify buyers, sellers, and investors.",hours:1,num:"43630*"},
+  {icon:"⚡",name:"Keeping AI on Things",tagline:"Smarter, Not Harder",desc:"Harness the power of AI and language models like ChatGPT to transform your real estate business.",hours:1,num:"47177*"},
+  {icon:"⚖️",name:"Legal Update I & II",tagline:"Necessary Knowledge",desc:"Review of recent legislative and TREC rule changes, including updates to TREC promulgated contract forms.",hours:4,num:"42039 / 42040*"},
+  {icon:"💻",name:"RE: Technology",tagline:"How-to & Can-do",desc:"A dynamic exploration of the latest tools and updates in real estate technology — equipping agents with a cutting edge.",hours:1,num:"47152*"},
+  {icon:"🎤",name:"Scripty Business",tagline:"Rehearsing Success",desc:"It's not just what you say — it's how you say it. Create scripts that take the guesswork out of client conversations.",hours:2,num:"47130*"},
+  {icon:"📸",name:"Social Media Bootcamp",tagline:"Like and Follow...",desc:"Social media connects agents to clients. Expand your reach and improve your online presence to find new prospects.",hours:2,num:"43480*"},
+  {icon:"📢",name:"TREC Advertising & Compliance",tagline:"Mind Your Marketing",desc:"Stay current on the rules and regulations of real estate advertising according to the Texas Real Estate Commission.",hours:1,num:"43609*"},
+  {icon:"🎬",name:"Video Marketing",tagline:"Cinematic Strategies",desc:"Step out of your comfort zone and into video marketing. This medium isn't going away — neither should you.",hours:1,num:"47157*"},
+  {icon:"💧",name:"Water Your Rights",tagline:"Rules and Regulations",desc:"A concise guide to Texas water rights for real estate agents and the impact on property transactions.",hours:1,num:"48091*"}
+];
+const HC={1:{bg:"rgba(45,125,210,.1)",b:"rgba(45,125,210,.2)",t:"#4a9ae8"},2:{bg:"rgba(250,237,54,.07)",b:"rgba(250,237,54,.2)",t:"#faed36"},3:{bg:"rgba(52,211,153,.07)",b:"rgba(52,211,153,.2)",t:"#34d399"},4:{bg:"rgba(248,113,113,.07)",b:"rgba(248,113,113,.2)",t:"#f87171"}};
+function renderUpcoming(){
+  const g=document.getElementById('upcomingGrid'),c=document.getElementById('upcomingCount');
+  const open=UPCOMING.filter(x=>x.status==='open').length;
+  c.textContent=open+(open===1?' session open':' sessions open');
+  if(!UPCOMING.length){g.innerHTML='<div class="no-classes"><p>No classes currently scheduled. Check back soon.</p></div>';return;}
+  g.innerHTML=UPCOMING.map(c=>{
+    const isOpen=c.status==='open',isSoon=c.status==='coming-soon';
+    const tag=isOpen?'a':'div',href=isOpen?`href="${c.registerUrl}"`:'';
+    const statusLabel=isOpen?'Registration Open':c.status==='full'?'Class Full':'Coming Soon';
+    const ctaLabel=isOpen?'Register Now →':c.status==='full'?'Join Waitlist →':'Notify Me →';
+    return `<${tag} class="class-card" ${href}><div class="class-status ${c.status}">${statusLabel}</div><div class="class-card-title">${c.title}</div><div class="class-card-sub">${c.tagline}</div><div class="class-meta"><div class="class-meta-row"><span class="class-meta-icon">📅</span><span class="class-meta-val">${c.date}</span></div><div class="class-meta-row"><span class="class-meta-icon">🕐</span><span class="class-meta-val">${c.time}</span></div><div class="class-meta-row"><span class="class-meta-icon">📍</span><span class="class-meta-val">${c.location}</span></div><div class="class-meta-row"><span class="class-meta-icon">🎓</span><span class="class-meta-val">${c.hours} CE Hours</span></div></div><div class="class-footer"><div><div class="class-price">$${c.price}</div><div class="class-price-sub">per person</div></div><span class="class-cta${isSoon?' disabled':''}">${ctaLabel}</span></div></${tag}>`;
+  }).join('');
+}
+function renderCatalog(){
+  document.getElementById('catalogGrid').innerHTML=CATALOG.map(c=>{
+    const h=HC[c.hours]||HC[1];
+    return `<div class="course-card"><div class="course-icon">${c.icon}</div><div class="course-name">${c.name}</div><div class="course-tagline">${c.tagline}</div><div class="course-desc">${c.desc}</div><div class="course-footer"><div class="course-hours" style="background:${h.bg};border:1px solid ${h.b};color:${h.t}">${c.hours} ${c.hours===1?'Hour':'Hours'}</div><span class="course-num">#${c.num}</span></div></div>`;
+  }).join('');
+}
+renderUpcoming();renderCatalog();
+</script>
 </body>
 </html>
