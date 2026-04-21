@@ -1,0 +1,47 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create deployment archive
+        run: |
+          zip -r deploy.zip . \
+            --exclude "*.git*" \
+            --exclude ".github/*" \
+            --exclude "*.md"
+
+      - name: Get upload credentials
+        id: creds
+        run: |
+          RESPONSE=$(curl -s -X GET \
+            "https://developers.hostinger.com/api/hosting/v1/files/upload-urls" \
+            -H "Authorization: Bearer ${{ secrets.HOSTINGER_API_KEY }}" \
+            -H "Content-Type: application/json")
+          echo "response=$RESPONSE" >> $GITHUB_OUTPUT
+          UPLOAD_URL=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('url',''))" 2>/dev/null || echo "")
+          AUTH_KEY=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('rest_auth_key',''))" 2>/dev/null || echo "")
+          echo "upload_url=$UPLOAD_URL" >> $GITHUB_OUTPUT
+          echo "auth_key=$AUTH_KEY" >> $GITHUB_OUTPUT
+
+      - name: Upload archive to Hostinger
+        run: |
+          curl -s -X POST "${{ steps.creds.outputs.upload_url }}" \
+            -H "Authorization: ${{ steps.creds.outputs.auth_key }}" \
+            -H "Upload-Filename: deploy.zip" \
+            -H "Content-Type: application/zip" \
+            --data-binary @deploy.zip
+
+      - name: Trigger deploy
+        run: |
+          curl -s -X POST \
+            "https://developers.hostinger.com/api/hosting/v1/accounts/u269315972/websites/classes.cnattitle.tech/deploy" \
+            -H "Authorization: Bearer ${{ secrets.HOSTINGER_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{"archive_path":"deploy.zip"}'
