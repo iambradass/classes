@@ -105,7 +105,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--whit
 .course-name{font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px;line-height:1.3;padding-right:60px}
 .course-tagline{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--yellow);font-weight:600;margin-bottom:12px}
 .course-desc{font-size:13px;color:#d9dee6;line-height:1.6;margin-bottom:16px}
-.course-footer{display:flex;align-items:center;justify-content:flex-end}
+.course-footer{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .course-num{font-size:9px;color:var(--grey);letter-spacing:1px}
 .course-cta-text{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);opacity:0;transition:opacity .2s}
 .course-card:hover .course-cta-text{opacity:1}
@@ -245,7 +245,7 @@ const CATALOG = [
   { name:"Ensuring Insurance Coverage", tagline:"It's a Rating System", desc:"Navigate homeowners insurance complexities \u2014 types, carriers, and rates \u2014 with actionable insights for every transaction.", hours:1, num:"48090*", slug:"ensuring-insurance" },
   { name:"Farm to (Closing) Table", tagline:"Harvest Your Leads", desc:"Locally sourced leads from the top platforms in the industry. Use exclusive farming tools to identify buyers, sellers, and investors.", hours:1, num:"43630*", slug:"farm-to-table" },
   { name:"Keeping AI on Things", tagline:"Smarter, Not Harder", desc:"Harness the power of AI and language models like ChatGPT to transform your real estate business.", hours:1, num:"47177*", slug:"keeping-ai-on-things" },
-  { name:"Legal Update I & II", tagline:"Necessary Knowledge", desc:"Review of recent legislative and TREC rule changes, including updates to TREC promulgated contract forms.", hours:4, num:"42039 / 42040*", slug:"legal-update" },
+  { name:"Legal Update I & II", tagline:"Necessary Knowledge", desc:"Review of recent legislative and TREC rule changes, including updates to TREC promulgated contract forms.", hours:4, num:"10279-RENE / 10280-RENE", slug:"legal-update" },
   { name:"RE: Technology", tagline:"How-to & Can-do", desc:"A dynamic exploration of the latest tools and updates in real estate technology \u2014 equipping agents with a cutting edge.", hours:1, num:"47152*", slug:"re-technology" },
   { name:"Scripty Business", tagline:"Rehearsing Success", desc:"It's not just what you say \u2014 it's how you say it. Create scripts that take the guesswork out of client conversations.", hours:2, num:"47130*", slug:"scripty-business" },
   { name:"Social Media Bootcamp", tagline:"Like and Follow...", desc:"Social media connects agents to clients. Expand your reach and improve your online presence to find new prospects.", hours:2, num:"43480*", slug:"social-media-bootcamp" },
@@ -320,7 +320,7 @@ function renderCatalog(filter) {
       <div class="course-name">${c.name}</div>
       <div class="course-tagline">${c.tagline}</div>
       <div class="course-desc">${c.desc}</div>
-      <div class="course-footer"><span class="course-cta-text">View &rarr;</span></div>
+      <div class="course-footer">${c.num ? `<span class="course-num">#${c.num}</span>` : '<span></span>'}<span class="course-cta-text">View &rarr;</span></div>
     </a>`;
   }).join('');
 }
