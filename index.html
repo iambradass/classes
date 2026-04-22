@@ -15,7 +15,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--whit
 .nav{position:sticky;top:0;z-index:100;background:rgba(8,12,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px}
 .nav-inner{max-width:1200px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nav-logo{width:32px;height:32px;flex-shrink:0}
+.nav-logo{height:32px;width:auto;flex-shrink:0;display:block}
 .nav-text{display:flex;flex-direction:column}
 .nav-title{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--white)}
 .nav-sub{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--grey)}
@@ -124,17 +124,11 @@ body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--whit
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="nav-brand" href="#">
-      <svg class="nav-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="32" height="32" rx="7" fill="#2d7dd2" fill-opacity=".15"/>
-        <path d="M16 7L7 14v11h6v-6h6v6h6V14L16 7z" fill="#2d7dd2"/>
-        <rect x="13" y="18" width="2" height="2" fill="#faed36"/>
-        <rect x="17" y="18" width="2" height="2" fill="#faed36"/>
-        <rect x="15" y="15" width="2" height="2" fill="#faed36"/>
-      </svg>
+    <a class="nav-brand" href="/">
+      <img class="nav-logo" src="/img/cnat-logo-white.png" alt="CNAT Title">
       <div class="nav-text">
-        <span class="nav-title">CNAT Education</span>
-        <span class="nav-sub">Community National Title</span>
+        <span class="nav-title">Education</span>
+        <span class="nav-sub">Continuing Education for TX Real Estate Pros</span>
       </div>
     </a>
     <div class="nav-links">
