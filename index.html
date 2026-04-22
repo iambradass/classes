@@ -105,7 +105,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--navy);color:var(--whit
 .course-name{font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px;line-height:1.3;padding-right:60px}
 .course-tagline{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--yellow);font-weight:600;margin-bottom:12px}
 .course-desc{font-size:13px;color:#d9dee6;line-height:1.6;margin-bottom:16px}
-.course-footer{display:flex;align-items:center;justify-content:space-between}
+.course-footer{display:flex;align-items:center;justify-content:flex-end}
 .course-num{font-size:9px;color:var(--grey);letter-spacing:1px}
 .course-cta-text{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);opacity:0;transition:opacity .2s}
 .course-card:hover .course-cta-text{opacity:1}
@@ -232,7 +232,7 @@ const UPCOMING = [
     location: "In-Person & Zoom",
     registerUrl: "/legal-update-april-2026/",
     status: "open",
-    courseNumbers: ["42039", "42040"]
+    courseNumbers: ["10279-RENE", "10280-RENE"]
   }
 ];
 
@@ -299,7 +299,7 @@ function renderUpcoming() {
         <div class="class-meta-row">${ICONS.cal}<span class="class-meta-val">${c.date}</span></div>
         <div class="class-meta-row">${ICONS.clock}<span class="class-meta-val">${c.time}</span></div>
         <div class="class-meta-row">${ICONS.pin}<span class="class-meta-val">${c.location}</span></div>
-        <div class="class-meta-row">${ICONS.grad}<span class="class-meta-val">${c.hours} CE Hours</span></div>
+        <div class="class-meta-row">${ICONS.grad}<span class="class-meta-val">${c.hours} CE Hours${c.courseNumbers && c.courseNumbers.length ? ' \u00b7 #' + c.courseNumbers.join(' / #') : ''}</span></div>
       </div>
       <div class="class-footer">
         <div><div class="class-price">${c.priceLabel || ('$' + c.price)}</div><div class="class-price-sub">${c.priceSub || 'per person'}</div></div>
@@ -320,7 +320,7 @@ function renderCatalog(filter) {
       <div class="course-name">${c.name}</div>
       <div class="course-tagline">${c.tagline}</div>
       <div class="course-desc">${c.desc}</div>
-      <div class="course-footer"><span class="course-num">Course #${c.num}</span><span class="course-cta-text">View &rarr;</span></div>
+      <div class="course-footer"><span class="course-cta-text">View &rarr;</span></div>
     </a>`;
   }).join('');
 }
