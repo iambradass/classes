@@ -141,7 +141,11 @@
         document.getElementById('confName').textContent = name;
         document.getElementById('confFormat').textContent = classChoice.value + ' \u00b7 ' + (attendance.value === 'Zoom' ? 'Attending via Zoom' : 'Attending In-Person, Fort Worth');
 
-        var stripeParams = new URLSearchParams({prefilled_email: email, prefilled_name: name});
+        var stripeParams = new URLSearchParams({
+            prefilled_email: email,
+            prefilled_name: name,
+            client_reference_id: payload.session
+        });
         var stripeUrl = stripeBase + '?' + stripeParams.toString();
 
         setTimeout(function() {
