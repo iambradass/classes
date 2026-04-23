@@ -96,11 +96,11 @@
                     <label class="form-label" for="regRef">Referred by <span style="text-transform:none;letter-spacing:0;color:#4a5568;font-weight:400">(optional)</span></label>
                     <select class="form-input" id="regRef" name="sales_rep">
                         <option value="">&mdash; Select your CNAT contact &mdash;</option>
-                        <option value="jami-foxx">Jami Foxx</option>
-                        <option value="shera-dfw">Shera (DFW Realtor)</option>
-                        <option value="kandi">Kandi (Closing with Kandi)</option>
-                        <option value="bradley">Bradley Patterson</option>
-                        <option value="other">Someone else / not sure</option>
+                        <option value="jami_cortez">Jami Cortez</option>
+                        <option value="shera_moffitt">Shera Moffitt</option>
+                        <option value="kandi_patterson">Kandi Patterson</option>
+                        <option value="bradley_patterson">Bradley Patterson</option>
+                        <option value="otherna">Other / Not Sure</option>
                     </select>
                 </div>
                 <input type="hidden" id="regRefSource" name="ref_source" value="">
@@ -117,20 +117,38 @@
     </div>
     <script>
     (function() {
+        // Short-alias -> GHL option value mapping (friendly URLs like ?ref=jami)
+        var REF_ALIAS = {
+            'jami': 'jami_cortez',
+            'jami-cortez': 'jami_cortez',
+            'jami_cortez': 'jami_cortez',
+            'jami-foxx': 'jami_cortez',
+            'shera': 'shera_moffitt',
+            'shera-moffitt': 'shera_moffitt',
+            'shera_moffitt': 'shera_moffitt',
+            'shera-dfw': 'shera_moffitt',
+            'kandi': 'kandi_patterson',
+            'kandi-patterson': 'kandi_patterson',
+            'kandi_patterson': 'kandi_patterson',
+            'bradley': 'bradley_patterson',
+            'bradley-patterson': 'bradley_patterson',
+            'bradley_patterson': 'bradley_patterson',
+            'bp': 'bradley_patterson',
+            'me': 'bradley_patterson',
+            'other': 'otherna',
+            'otherna': 'otherna'
+        };
         var params = new URLSearchParams(window.location.search);
-        var ref = params.get('ref') || params.get('rep') || '';
-        if (ref) {
-            var sel = document.getElementById('regRef');
-            var refLower = ref.toLowerCase().trim();
-            var matched = false;
-            for (var i = 0; i < sel.options.length; i++) {
-                if (sel.options[i].value === refLower) { sel.value = refLower; matched = true; break; }
-            }
-            if (matched) {
+        var rawRef = (params.get('ref') || params.get('rep') || '').toLowerCase().trim();
+        if (rawRef) {
+            var resolved = REF_ALIAS[rawRef] || '';
+            if (resolved) {
+                var sel = document.getElementById('regRef');
+                sel.value = resolved;
                 document.getElementById('refGroup').style.display = 'none';
                 document.getElementById('regRefSource').value = 'url';
             } else {
-                document.getElementById('regRefSource').value = 'url-unmatched:' + refLower;
+                document.getElementById('regRefSource').value = 'url-unmatched:' + rawRef;
             }
         } else {
             document.getElementById('regRefSource').value = 'manual';
