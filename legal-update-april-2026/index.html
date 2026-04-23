@@ -92,6 +92,18 @@
                 <div class="form-group"><label class="form-label" for="regName"><span class="step-num">3</span>Your Name</label><input class="form-input" type="text" id="regName" name="name" placeholder="First and last name" required></div>
                 <div class="form-group"><label class="form-label" for="regEmail">Email Address</label><input class="form-input" type="email" id="regEmail" name="email" placeholder="you@example.com" required></div>
                 <div class="form-group"><label class="form-label" for="regPhone">Phone Number</label><input class="form-input" type="tel" id="regPhone" name="phone" placeholder="(817) 555-0100"></div>
+                <div class="form-group" id="refGroup">
+                    <label class="form-label" for="regRef">Referred by <span style="text-transform:none;letter-spacing:0;color:#4a5568;font-weight:400">(optional)</span></label>
+                    <select class="form-input" id="regRef" name="sales_rep">
+                        <option value="">&mdash; Select your CNAT contact &mdash;</option>
+                        <option value="jami-foxx">Jami Foxx</option>
+                        <option value="shera-dfw">Shera (DFW Realtor)</option>
+                        <option value="kandi">Kandi (Closing with Kandi)</option>
+                        <option value="bradley">Bradley Patterson</option>
+                        <option value="other">Someone else / not sure</option>
+                    </select>
+                </div>
+                <input type="hidden" id="regRefSource" name="ref_source" value="">
                 <button type="submit" class="submit-btn" id="submitBtn">Continue to Payment</button>
             </form>
             <div class="reg-confirmation" id="regConfirmation">
@@ -104,6 +116,27 @@
         <div class="page-footer"><p class="tagline">#AlwaysBeClosing &middot; <span>Texas Style</span></p><p class="provider">TREC Provider #10034 &middot; Approved for Texas CE</p></div>
     </div>
     <script>
+    (function() {
+        var params = new URLSearchParams(window.location.search);
+        var ref = params.get('ref') || params.get('rep') || '';
+        if (ref) {
+            var sel = document.getElementById('regRef');
+            var refLower = ref.toLowerCase().trim();
+            var matched = false;
+            for (var i = 0; i < sel.options.length; i++) {
+                if (sel.options[i].value === refLower) { sel.value = refLower; matched = true; break; }
+            }
+            if (matched) {
+                document.getElementById('refGroup').style.display = 'none';
+                document.getElementById('regRefSource').value = 'url';
+            } else {
+                document.getElementById('regRefSource').value = 'url-unmatched:' + refLower;
+            }
+        } else {
+            document.getElementById('regRefSource').value = 'manual';
+        }
+    })();
+
     document.getElementById('regForm').addEventListener('submit', async function(e) {
         e.preventDefault();
         var btn = document.getElementById('submitBtn');
@@ -128,6 +161,9 @@
         var stripeBase = classChoice.getAttribute('data-stripe');
         var price = classChoice.getAttribute('data-price');
 
+        var salesRep = document.getElementById('regRef').value;
+        var refSource = document.getElementById('regRefSource').value;
+
         var payload = {
             name: name,
             email: email,
@@ -135,6 +171,8 @@
             attendance: attendance.value,
             class_choice: classChoice.value,
             class_price: price,
+            sales_rep: salesRep,
+            ref_source: refSource,
             source: 'Legal Update Landing Page',
             session: 'april-2026',
             class_name: 'Legal Update I & II',
