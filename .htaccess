@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^(.*)$ https://classes.cnattitle.com/$1 [R=301,L,QSA]
